@@ -6,3 +6,4 @@ export const firebaseConfig = {
     storageBucket: "taxis-3408c.appspot.com",
     messagingSenderId: "974935993983"
 };
+

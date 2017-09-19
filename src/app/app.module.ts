@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { UsuarioProvider } from '../providers/usuario/usuario';
+
 
 //firebase
 import { AngularFireModule } from 'angularfire2';  //angularFire se necesita siempre que se use firebase
@@ -16,6 +16,15 @@ import { firebaseConfig } from '../config/firebase.config'; // variable de ambie
 
 //storage
 import { IonicStorageModule } from '@ionic/storage'; 
+
+//plugins
+import { Geolocation } from '@ionic-native/geolocation';
+ //servicios personalizados 
+import { UbicacionProvider } from '../providers/ubicacion/ubicacion';
+import { UsuarioProvider } from '../providers/usuario/usuario';
+
+//para presentar mapa
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -28,7 +37,10 @@ import { IonicStorageModule } from '@ionic/storage';
      AngularFireModule.initializeApp(firebaseConfig), // importar firebase/app necesario para todo con firebase
     AngularFireDatabaseModule, //Importar firebase/database, solo necesario para las caracteristicas de database 
     AngularFireAuthModule, // Importar firebase/auth,  para las caracteristicas de auth 
-    IonicStorageModule.forRoot() 
+    IonicStorageModule.forRoot(),
+     AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyAJo4O7mDz_3k9uZBg1HLjePGE-nneE2-E'
+    })
 
   ],
   bootstrap: [IonicApp],
@@ -40,7 +52,9 @@ import { IonicStorageModule } from '@ionic/storage';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UsuarioProvider
+    UsuarioProvider,
+    Geolocation,
+    UbicacionProvider
   ]
 })
 export class AppModule {}

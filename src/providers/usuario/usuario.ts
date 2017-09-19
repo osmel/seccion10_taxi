@@ -113,12 +113,12 @@ export class UsuarioProvider {
 
   }
 
-/*
+
   borrar_usuario(){
-    this.clave = null;
+    this.clave = null; //destruir la clave y guardarlo en el storage para que deje de existir
     this.guardar_storage();
   }
-  */
+
 
 
  

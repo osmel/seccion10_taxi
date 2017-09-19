@@ -9,6 +9,9 @@ import { Slides } from 'ionic-angular';
 
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 
+import { HomePage } from '../../pages/home/home';
+
+
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -72,9 +75,11 @@ continuar(){  //validar el usuario, si la clave es valida
 
   }
 
+ ingresar(){
+    // tenemos la clave, ir al home
+    this.navCtrl.setRoot( HomePage );
+  }
 
-ingresa(){  //ir al home
-  
-}
+
 
 }
