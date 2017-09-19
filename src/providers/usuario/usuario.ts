@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 //import { AngularFireModule } from 'angularfire2'; 
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
 import { AngularFireDatabase } from 'angularfire2/database'; //, FirebaseListObservable
 import { Platform } from "ionic-angular";
 

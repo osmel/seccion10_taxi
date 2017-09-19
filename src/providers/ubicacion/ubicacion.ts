@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
 
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database'; //, FirebaseListObservable
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 
